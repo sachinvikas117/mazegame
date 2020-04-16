@@ -1,0 +1,11 @@
+<div class="maze_cont" >
+    <div class="mazeRow" [style.width.px]="width" *ngFor="let i of rowArray">
+        <div class="mazeColum" *ngFor="let j of colArray" [id]="colArray.length*(i)+j">
+           
+            <div class="mazeGreen" *ngIf="mazeSweetRel[colArray.length*(i)+j]['status']">
+               
+            </div>
+        </div>
+    </div>
+    <div class="mazeRed" tabindex="0" id="mazeRed"[style.top.px]="mazeTop" [style.left.px]="mazeLeft" (keyup)="checkMovement($event)" ></div>
+</div>
